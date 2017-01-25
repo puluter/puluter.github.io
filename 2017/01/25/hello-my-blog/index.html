@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hello my blog | Puluter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="http://www.tuicool.com/articles/mEzqeaM
+二分1Give you three sequences of numbers A, B, C, then we giveyou a number X. Now you need to calculate if you can findthe three numbers Ai, Bj, Ck, which satisf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hello my blog">
+<meta property="og:url" content="http://puluter.github.io/2017/01/25/hello-my-blog/index.html">
+<meta property="og:site_name" content="Puluter">
+<meta property="og:description" content="http://www.tuicool.com/articles/mEzqeaM
+二分1Give you three sequences of numbers A, B, C, then we giveyou a number X. Now you need to calculate if you can findthe three numbers Ai, Bj, Ck, which satisf">
+<meta property="og:updated_time" content="2017-01-25T03:22:12.274Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hello my blog">
+<meta name="twitter:description" content="http://www.tuicool.com/articles/mEzqeaM
+二分1Give you three sequences of numbers A, B, C, then we giveyou a number X. Now you need to calculate if you can findthe three numbers Ai, Bj, Ck, which satisf">
+  
+    <link rel="alternate" href="/atom.xml" title="Puluter" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Puluter</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://puluter.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-hello-my-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/25/hello-my-blog/" class="article-date">
+  <time datetime="2017-01-25T03:21:00.000Z" itemprop="datePublished">2017-01-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hello my blog
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><a href="http://www.tuicool.com/articles/mEzqeaM" target="_blank" rel="external">http://www.tuicool.com/articles/mEzqeaM</a></p>
+<h3 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h3><p>1<br>Give you three sequences of numbers A, B, C, then we give<br>you a number X. Now you need to calculate if you can find<br>the three numbers Ai, Bj, Ck, which satisfy the formula<br>Ai+Bj+Ck = X.<br>1 ≤ L, N, M ≤ 500, 1 ≤ T ≤ 1000</p>
+</blockquote>
+<p>枚举ai+bj，枚举k，再在ai+bj中二分找对应值。</p>
+<blockquote>
+<p>2<br>你有 N 个物品，每个物品有 Ai,Bi 属性，要求选出 K 个物<br>品，使得<br>$$\frac{\sum_{i\epsilon k} A<em>i}{\sum</em>{i\epsilon k} B_i}$$<br>取max。</p>
+</blockquote>
+<p>上述式子等价于$\sum A_i-B_i<em>ans$，于是我们先二分出$ans$，然后我们计算1~n的$V_i = A_i-B_i</em>ans$，最后取最大的k个$V_i$，求和即可。</p>
+<h3 id="整体二分"><a href="#整体二分" class="headerlink" title="整体二分"></a>整体二分</h3><blockquote>
+<p>将询问集合二分到底层</p>
+</blockquote>
+<h3 id="莫队算法"><a href="#莫队算法" class="headerlink" title="莫队算法"></a>莫队算法</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;cmath&gt;</div><div class="line">#define rep(i,a,b) for(int i=a;i&lt;=b;i++)</div><div class="line">#define reps(i,a,b) for(int i=a;i&gt;=b;i--)</div><div class="line">#define db(x) if(DEBUG) cout&lt;&lt;"&#123;"&lt;&lt;"="&lt;&lt;(x)&lt;&lt;"&#125;"</div><div class="line">#define edl if(DEBUG) cout&lt;&lt;endl</div><div class="line">//#define int long long</div><div class="line">#define ll long long </div><div class="line">using namespace std;</div><div class="line">const bool DEBUG = 1;</div><div class="line">const int N = 50005;</div><div class="line">int cnt[N]=&#123;0&#125;,a[N]=&#123;0&#125;,pos[N]=&#123;0&#125;;</div><div class="line">int n,m,ans=0;</div><div class="line"></div><div class="line">int rd()&#123;</div><div class="line">	int ans=0;</div><div class="line">	char p=getchar();</div><div class="line">	while(p&gt;'9'||p&lt;'0') p=getchar();</div><div class="line">	while(p&gt;='0'&amp;&amp;p&lt;='9') ans=ans*10+p-'0',p=getchar();</div><div class="line">	return ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line">struct que&#123;</div><div class="line">	int l,r,id;</div><div class="line">&#125; qu[N];</div><div class="line"></div><div class="line">bool cmp(que a,que b)&#123;</div><div class="line">	//printf("&#123;%d %d %d&#125;",a.id,a.l,a.r);</div><div class="line">	if(pos[a.l]==pos[b.l])  </div><div class="line">        return a.r&lt;b.r;  </div><div class="line">    return pos[a.l]&lt;pos[b.l];  </div><div class="line">&#125;</div><div class="line"></div><div class="line">void update(int x,int v)&#123;</div><div class="line">	ans-=cnt[a[x]]*cnt[a[x]];</div><div class="line">	cnt[a[x]]+=v;</div><div class="line">	ans+=cnt[a[x]]*cnt[a[x]];</div><div class="line">&#125;</div><div class="line"></div><div class="line">ll gcd(ll m,ll n)&#123;</div><div class="line">	while(n!=0)&#123;</div><div class="line">		ll t=m%n;</div><div class="line">		m=n;</div><div class="line">		n=t;</div><div class="line">	&#125;</div><div class="line">	return m;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ll u[N],v[N];</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	cin&gt;&gt;n&gt;&gt;m;</div><div class="line">	int q1,q2,pl=1,pr=0;</div><div class="line">	int bk=ceil(sqrt(1.0*n));</div><div class="line">	rep(i,1,n) a[i]=rd(),pos[i]=(i-1)/bk;//,cout&lt;&lt;","&lt;&lt;pos[i]&lt;&lt;",";</div><div class="line">	rep(i,1,m)&#123;</div><div class="line">		q1=rd(),q2=rd();</div><div class="line">		qu[i]=(que)&#123;q1,q2,i&#125;;</div><div class="line">	&#125;</div><div class="line">	sort(qu+1,qu+1+m,cmp);</div><div class="line">	rep(i,1,m)&#123;</div><div class="line">		int id=qu[i].id;</div><div class="line">		if(qu[i].l==qu[i].r) &#123;</div><div class="line">			u[id]=0,v[id]=1;</div><div class="line">			continue;</div><div class="line">		&#125;</div><div class="line">		if(pr&lt;qu[i].r)</div><div class="line">			rep(j,pr+1,qu[i].r)</div><div class="line">				update(j,1);</div><div class="line">		else reps(j,pr,qu[i].r+1)</div><div class="line">				update(j,-1);</div><div class="line">		pr=qu[i].r;</div><div class="line">		</div><div class="line">		if(pl&lt;qu[i].l)</div><div class="line">			rep(j,pl,qu[i].l-1)</div><div class="line">				update(j,-1);</div><div class="line">		else reps(j,pl-1,qu[i].l)</div><div class="line">				update(j,1);</div><div class="line">		pl=qu[i].l;</div><div class="line">		ll aa=ans-qu[i].r+qu[i].l-1;</div><div class="line">		ll bb=(ll)(qu[i].r-qu[i].l+1)*(qu[i].r-qu[i].l);</div><div class="line">		ll cc=gcd(aa,bb);</div><div class="line">		aa/=cc,bb/=cc;</div><div class="line">		u[id]=aa,v[id]=bb;</div><div class="line">	&#125;</div><div class="line">	rep(i,1,m) printf("%lld/%lld\n",u[i],v[i]);	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://puluter.github.io/2017/01/25/hello-my-blog/" data-id="ciycdxiwv0000iku4t3ekvkld" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/25/hello-my-blog/">hello my blog</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Puluter<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
